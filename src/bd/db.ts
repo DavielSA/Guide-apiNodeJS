@@ -73,8 +73,8 @@ export default class DB {
      * @param e When exist error this var is declared
      * @param r When the insert is sussefully this contains
      */
-    protected CallBackInsert(callback: (Respuesta: ResponseG) =>ResponseG,
-                             e: mongodb.MongoError, r: WriteOpResult) {
+    protected CallBackInsert(callback: (Respuesta: ResponseG) => ResponseG,
+        e: mongodb.MongoError, r: WriteOpResult) {
         const Respuesta: ResponseG = this.GetResponseEmpty();
 
         if (e) {
@@ -94,7 +94,7 @@ export default class DB {
      * @param r When the insert is sussefully this contains
      */
     protected CallUpdate(callback: (Respuesta: ResponseG) => ResponseG,
-                         e: mongodb.MongoError, r: WriteOpResult) {
+        e: mongodb.MongoError, r: WriteOpResult) {
         const Respuesta: ResponseG = this.GetResponseEmpty();
 
         if (e) {
@@ -111,7 +111,7 @@ export default class DB {
      * Create empty ResponseG default
      */
     public GetResponseEmpty(): ResponseG {
-        return  {
+        return {
             error: [],
             warning: [],
             info: [],
